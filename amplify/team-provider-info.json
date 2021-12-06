@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-creddao-dev-154433-authRole",
+      "UnauthRoleArn": "arn:aws:iam::058616541184:role/amplify-creddao-dev-154433-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::058616541184:role/amplify-creddao-dev-154433-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-creddao-dev-154433-deployment",
+      "UnauthRoleName": "amplify-creddao-dev-154433-unauthRole",
+      "StackName": "amplify-creddao-dev-154433",
+      "StackId": "arn:aws:cloudformation:us-west-1:058616541184:stack/amplify-creddao-dev-154433/504153c0-5625-11ec-aff9-02a9db4f7f83",
+      "AmplifyAppId": "doi144sqi6t8t"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "doi144sqi6t8t",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
