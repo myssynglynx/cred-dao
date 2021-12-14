@@ -73,14 +73,15 @@ class Main extends React.Component {
               credDAO
             </p>
           </div>
-          <img
-            id="logo"
-            src={logo}
-            alt="logo"
-            onMouseOver={this.mouseOverLogo}
-            onClick={this.clickLogo}
-          />
-
+          <div id="center">
+            <img
+              id="logo"
+              src={logo}
+              alt="logo"
+              onMouseOver={this.mouseOverLogo}
+              onClick={this.clickLogo}
+            />
+          </div>
           <div id="description">
             <p id="description">
               <span>A community-driven blockchain project who seeks to connect & empower artists, specialists, professionals, & audiences. Built on the Solana blockchain.</span>

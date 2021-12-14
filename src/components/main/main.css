@@ -15,7 +15,7 @@ div.Main {
 div#Main-Body div#title {
   z-index: 3;
   background-image: radial-gradient(ellipse at bottom, rgb(255, 0, 70, 1), rgb(203, 0, 118, 1));
-  padding-top: 15%;
+  padding-top: 6rem;
   padding-bottom: 0.3rem;
   width: 100%;
   margin: 0 auto;
@@ -35,12 +35,15 @@ div#Main-Body div#title p#title {
   background-image: radial-gradient(closest-side, rgb(255,255,255,0.2), rgb(0,0,0,0));
 }
 
-.Main img#logo {
+.Main div#center {
+  display: block;
+}
+.Main div#center img#logo {
   z-index: 1;
   display: flex;
   opacity: 0;
-  min-width: 15rem;
-  min-height: 15rem;
+  width: auto;
+  max-height: 30rem;
   max-width: 30rem;
   margin: 2rem auto;
   overflow: hidden;
@@ -55,18 +58,19 @@ div#Main-Body div#description {
   z-index: 3;
   background-image: radial-gradient(ellipse at top, rgb(255, 0, 70, 1), rgb(203, 0, 118, 1));
   width: 100%;
-  padding-bottom: 30%;
+  padding-bottom: 10rem;
   border-radius: 14% 14% 0 0;
+  overflow: hidden;
 }
 div#description p#description {
-  max-width: 35rem;
+  max-width: 50rem;
   background-image: radial-gradient(closest-side, rgb(255, 0, 70, 0.3), rgb(203, 0, 118, 0));
-  margin: 2rem auto 3rem auto;
+  margin: 2.5rem auto 3rem auto;
   cursor: default;
 
+  font-size: 2.5rem;
+  font-weight: 400;
   font-family: 'Quicksand', 'Montserrat', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 500;
   color: #FFFFFF;
 }
 p#description {
@@ -80,14 +84,14 @@ div#description a#join-discord:visited {
   width: fit-content;
   z-index: 2rem;
 
-  margin: 2rem auto 3rem auto;
-  padding: 1rem 2rem;
+  margin: 2rem auto 0 auto;
+  padding: 1.5rem 2rem;
   border-radius: 5rem;
 
   background-image: linear-gradient(#FF0046, rgb(255,0,118,1));
-  box-shadow: 0 0 2rem 1rem rgb(255,255,255,1);
+  box-shadow: 0 0.1rem 2rem 0.9rem rgb(255,255,255,0.9);
 
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-family: 'Quicksand', 'Montserrat', sans-serif;
   font-weight: 600;
   color: #FFFFFF;
@@ -96,37 +100,44 @@ div#description a#join-discord:visited {
 }
 .Main a#join-discord:hover {
   background-color: #FF0046;
-  box-shadow: 0 0 3rem 3rem rgb(255,255,255,1);
+  box-shadow: 0 0 2rem 2rem rgb(255,255,255,1);
   transition: background-color 0.3s ease-in-out,
               box-shadow 0.3s ease-in-out;
 }
-
-
+@media screen and (max-width: 800px) {
+  div#Main-Body div#title {
+    padding-top: 4%;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.8rem;
+    max-width: 40rem;
+  }
+  div#Main-Body img#logo {
+    margin: 2rem auto;
+  }
+}
 @media screen and (max-width: 600px) {
   div#Main-Body div#title p#title {
     font-size: 6rem;
   }
 }
-
 @media screen and (max-width: 430px) {
   div#Main-Body div#title p#title {
     font-size: 5rem;
   }
+  div#Main-Body div#description p#description {
+    font-size: 1.4rem;
+  }
 }
 @media screen and (max-width: 380px) {
   div#Main-Body div#title p#title {
-    margin: 0 auto;
     font-size: 4rem;
   }
-  div#description p#description {
-    font-size: 1.2rem;
-  }
-  div#description a#join-discord,
-  div#description a#join-discord:visited {
-    margin: 1rem auto;
+  div#Main-Body div#description p#description {
+    font-size: 1.4rem;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 312px) {
   div#Main-Body div#title p#title {
     font-size: 3.5rem;
   }
@@ -137,6 +148,10 @@ div#description a#join-discord:visited {
   }
 }
 @media screen and (max-height: 1024px) {
+  div#Main-Body div#title p#title {
+    margin: 1.5rem auto 1rem auto;
+  }
+/*
   div#description p#description {
     font-size: 1.2rem;
     margin: 1.6rem auto;
@@ -148,7 +163,9 @@ div#description a#join-discord:visited {
   div#description a#join-discord:visited {
     margin: 1rem auto 1rem auto;
   }
+  */
 }
+/*
 @media screen and (max-height: 812px) {
   div#description p#description {
     padding-top: 1.6rem;
@@ -173,15 +190,287 @@ div#description a#join-discord:visited {
     margin: 1rem auto;
   }
 }
+*/
 @media screen and (max-height: 700px) {
   div#Main-Body div#title p#title {
-    margin: 0 auto;
+    margin: 1rem auto 0.5rem auto;
     font-size: 4rem;
   }
-  div#description p#description {
-    margin: 0.3rem auto 0 auto;
+  div#Main-Body div#description p#description {
+    margin: 1rem auto 0 auto;
   }
-  div#Main-Body img#logo {
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.3rem;
+  }
+}
+/* iPad Pro specific */
+@media screen and (max-width: 1024px) and
+                  (min-width: 1020px) and
+                  (max-height: 1366px) and
+                  (min-height: 1360px) {
+  div#Main-Body div#description p#description {
+    margin: 3rem auto;
+    max-width: 50rem;
+  }
+  div#Main-Body div#description a#join-discord {
+    margin: 0 auto;
+    font-size: 2.2rem;
+  }
+}
+/* iPad specific */
+@media screen and (max-width: 768px) and
+                  (min-width: 760px) and
+                  (max-height: 1024px) and
+                  (min-height: 1020px) {
+  div#Main-Body div#title {
+    padding-top: 2%;
+  }
+  div#Main-Body div#description {
+    overflow: hidden;
+  }
+  div#Main-Body div#description p#description {
+    max-width: 40rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.6rem;
+  }
+}
+/* iPhone X specific */
+@media screen and (max-width: 375px) and
+                  (min-width: 370px) and
+                  (max-height: 812px) and
+                  (min-height: 810px) {
+  div#Main-Body div#title {
+    padding-top: 0;
+    padding-bottom: 3%;
+  }
+  div#Main-Body div#title p#title {
+    margin: 2rem auto 0.5rem auto;
+  }
+  div#Main-Body div#center img#logo {
+    width: 18rem;
+    height: 18rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.4rem;
+    margin: 2rem auto 2.5rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
     margin: 1rem auto;
+    padding: 1.6rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+/* iPhone 6/7/8 Plus specific */
+@media screen and (max-width: 414px) and
+                  (min-width: 410px) and
+                  (max-height: 736px) and
+                  (min-height: 730px) {
+  div#Main-Body div#title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div#Main-Body div#title p#title {
+  }
+  div#Main-Body div#title p#title {
+    margin: 2rem auto 1rem auto;
+  }
+  div#Main-Body div#center img#logo {
+    width: 18rem;
+    height: 18rem;
+  }
+  div#Main-Body div#description p#description {
+    max-width: 20rem;
+    font-size: 1.2rem;
+    margin: 1.5rem auto 2rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    margin: 0 auto 1rem auto;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+}
+/* iPhone 6/7/8 specific */
+@media screen and (max-width: 375px) and
+                  (min-width: 370px) and
+                  (max-height: 668px) and
+                  (min-height: 660px) {
+  div#Main-Body div#title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div#Main-Body div#title p#title {
+    margin: 2rem auto 1rem auto;
+  }
+  div#Main-Body div#center img#logo {
+    width: 16rem;
+    height: 16rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.2rem;
+    margin: 1.4rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin: 0.2rem auto 0.5rem auto;
+  }
+}
+/* iPhone 5/SE specific */
+@media screen and (max-width: 320px) and
+                (min-width: 318px) and
+                (max-height: 570px) and
+                (min-height: 560px) {
+  div#Main-Body div#center img#logo {
+    width: 12rem;
+    height: 12rem;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.2rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1rem;
+    margin: 1.1rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1rem;
+    margin: 1.5rem auto;
+    padding: 1rem 2rem;
+  }
+}
+/* Pixel 2 XL specific */
+@media screen and (max-width: 412px) and
+                  (min-width: 410px) and
+                  (max-height: 824px) and
+                  (min-height: 822px) {
+  div#Main-Body div#title {
+    padding: 0;
+  }
+  div#Main-Body div#center img#logo {
+    width: 20rem;
+    height: 20rem;
+  }
+  div#Main-Body div#description p#description {
+    margin: 2rem auto 1rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.5rem;
+  }
+}
+/* Pixel 2 specific */
+@media screen and (max-width: 411px) and
+                  (min-width: 410px) and
+                  (max-height: 732px) and
+                  (min-height: 730px) {
+}
+/* Galaxy S5 specific */
+@media screen and (max-width: 362px) and
+                  (min-width: 358px) and
+                  (max-height: 642px) and
+                  (min-height: 638px) {
+  div#Main-Body div#center img#logo {
+    width: 16rem;
+    height: 16rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.15rem;
+    margin: 1.2rem auto 1.4rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+  }
+}
+/* Surface DUO specific */
+@media screen and (max-width: 540px) and
+                  (max-height: 720px) and
+                  (min-width: 538px) and
+                  (min-height: 718px) {
+  div#Main-Body div#title p#title {
+    margin: 0 auto 0.5rem auto;
+  }
+  div#Main-Body div#center img#logo {
+    width: 18rem;
+    height: 18rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.4rem;
+    margin: 1.5rem auto 1.4rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+  }
+}
+/* Galaxy Fold specific */
+@media screen and (max-width: 282px) and
+                  (min-width: 280px) and
+                  (max-height: 654px) and
+                  (min-height: 652px) {
+  div#Main-Body div#title p#title {
+    font-size: 3rem;
+  }
+  div#Main-Body div#center img#logo {
+    width: 15rem;
+    height: 15rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.1rem;
+    margin: 1rem auto 0 auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    margin: 1.5rem auto;
+    padding: 1rem 2rem;
+  }
+}
+/* Nest Hub specific */
+@media screen and (max-width: 1024px) and
+                  (min-width: 1020px) and
+                  (max-height: 600px) and
+                  (min-height: 598px) {
+  div#Main-Body div#title {
+    padding-top: 3%;
+  }
+  div#Main-Body div#title p#title {
+    font-size: 4rem;
+  }
+  div#Main-Body div#center img#logo {
+    height: 14rem;
+    width: 14rem;
+  }
+  div#Main-Body div#description a#join-discord {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+  div#Main-Body div#description p#description {
+    font-size: 1.4rem;
+    margin: 1.4rem auto 1.4rem auto ;
+  }
+}
+/* Nest Hub specific */
+@media screen and (max-width: 1280px) and
+                  (min-width: 1278px) and
+                  (max-height: 800px) and
+                  (min-height: 798px) {
+  div#Main-Body div#title {
+    padding-top: 1rem;
+  }
+  div#Main-Body div#center img#logo {
+    height: 19rem;
+    width: 19rem;
+  }
+  div#Main-Body div#description p#description {
+    max-width: 60rem;
+    font-size: 1.6rem;
+    margin: 2rem auto 2rem auto;
+  }
+  div#Main-Body div#description a#join-discord {
+    margin: 0 auto;
+    font-size: 1.6rem;
   }
 }
